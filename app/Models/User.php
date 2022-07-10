@@ -19,6 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'last_name',
+        'middle_name',
+        'role',
         'email',
         'password',
     ];
@@ -41,4 +44,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function tests(){
+       if($this->role==2){
+            return $this->hasMany(Test::class,'teacher_id','id');
+        }
+        if($this->role==3){
+            return $this->belongsToMany(Test::class,'tests_and_students','student_id','test_id')->withPivot('score');
+       }
+    }
+
 }

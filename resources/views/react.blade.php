@@ -12,7 +12,7 @@
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="example"></div>
+<div id="root"></div>
 <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

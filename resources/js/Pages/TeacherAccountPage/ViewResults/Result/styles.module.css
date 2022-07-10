@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap');
+body{
+    font-family: 'Krub', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding:20px;
+    margin:20px;
+    height: 30px;
+    background-color: rgb(210, 176, 220);
+    -webkit-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+}
+
+.title{
+    font-weight:300;
+    font-size:18px;
+}
+
+.code{
+    font-weight:100;
+    font-size: 18px;
+}
+
+.text_container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 30%;
+}
+
+.button_container {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 40%;
+}
+
+.button{
+    font: inherit;
+    width: 25%;
+    height:35px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+}

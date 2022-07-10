@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap');
+
+body{
+    font-family: 'Krub', sans-serif;
+    font-size: 18px;
+    background: rgb(249, 252, 254) fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+    margin:10px;
+    background-color: rgb(240,249,255);
+    -webkit-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+}
+
+p{
+    padding:0;
+    margin:0;
+}
+
+.form_container{
+    margin:5px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    background-color:rgb(239, 223, 244);
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+}
+
+.test_container{
+    min-width: 40%;
+}
+
+.button{
+    height:40px;
+    width:80px;
+    background-color: rgb(236, 208, 246);
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    -webkit-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
+}
+
+.input{
+    height:30px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: rgb(223, 203, 230) solid 2px;
+    padding: 5px;
+    font: inherit;
+    outline: none;
+}
+
+.inputs{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
