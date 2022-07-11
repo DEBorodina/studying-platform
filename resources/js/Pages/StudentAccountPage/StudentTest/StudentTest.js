@@ -9,7 +9,7 @@ const StudentTest = ({result}) => {
         <h3 className={styles.title}>{result.name}</h3>
         <p className={styles.code}>{`${result.teacher.last_name} ${result.teacher.name} ${result.teacher.middle_name}`}</p>
       </div>
-      <p className={styles.title}>{result.score}</p>
+      <p className={styles.title}>{result.score} %</p>
     </div>
   );
 };

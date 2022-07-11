@@ -9,6 +9,7 @@ import ViewTestContainer from "../Pages/TeacherAccountPage/ViewTest/ViewTestCont
 import ViewResultsContainer from "../Pages/TeacherAccountPage/ViewResults/ViewResultsContainer";
 import StudentAccountContainer from "../Pages/StudentAccountPage/StudentAccount/StudentAccountContainer";
 import StudentPassTestContainer from "../Pages/StudentAccountPage/StudentPassTest/StudentPassTestContainer";
+import NotFound from "../Pages/NotFound";
 
 
 export const Router = () => {
@@ -42,6 +43,10 @@ export const Router = () => {
         <Route
             path={`${ROUTE_NAMES.STUDENT_PASS_TEST}/:code`}
             element={<StudentPassTestContainer />}
+        />
+        <Route
+            path='*'
+            element={<NotFound/>}
         />
     </Routes>
   );

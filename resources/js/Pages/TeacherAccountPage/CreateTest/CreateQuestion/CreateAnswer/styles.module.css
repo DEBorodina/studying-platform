@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 
 body{
-    font-family: 'Krub', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     background: rgb(249, 252, 254) fixed;
 }
@@ -52,6 +52,16 @@ p{
     -moz-box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);
 }
+
+.button:hover{
+    background-color: rgb(227, 197, 238);
+    transition: 0.3s;
+}
+
+.button:active{
+    background-color: rgb(236, 208, 246);
+}
+
 
 .input{
     height:30px;

@@ -2282,6 +2282,35 @@ var AuthorizationPageContainer = function AuthorizationPageContainer() {
 
 /***/ }),
 
+/***/ "./resources/js/Pages/NotFound.js":
+/*!****************************************!*\
+  !*** ./resources/js/Pages/NotFound.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+var NotFound = function NotFound(_ref) {
+  var student = _ref.student;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+      children: "NOT FOUND"
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NotFound);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/StartingPage/StartingPage.js":
 /*!*********************************************************!*\
   !*** ./resources/js/Pages/StartingPage/StartingPage.js ***!
@@ -2436,7 +2465,6 @@ var StartingPageContainer = function StartingPageContainer() {
     axios__WEBPACK_IMPORTED_MODULE_3___default().post("http://studying-platform.test/api/login", inputValue).then(function (response) {
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
-        console.log(response.data.user);
 
         if (response.data.user.role === "2") {
           navigate("/teacher");
@@ -2897,9 +2925,9 @@ var StudentTest = function StudentTest(_ref) {
         className: _styles_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].code,
         children: "".concat(result.teacher.last_name, " ").concat(result.teacher.name, " ").concat(result.teacher.middle_name)
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
       className: _styles_module_css__WEBPACK_IMPORTED_MODULE_1__["default"].title,
-      children: result.score
+      children: [result.score, " %"]
     })]
   });
 };
@@ -4222,7 +4250,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Router": () => (/* binding */ Router)
 /* harmony export */ });
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
 /* harmony import */ var _routeNames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./routeNames */ "./resources/js/Routes/routeNames.js");
 /* harmony import */ var _Pages_StartingPage_StartingPageContainer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Pages/StartingPage/StartingPageContainer */ "./resources/js/Pages/StartingPage/StartingPageContainer.js");
 /* harmony import */ var _Pages_AuthorizationPage_AuthorizationPageContainer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Pages/AuthorizationPage/AuthorizationPageContainer */ "./resources/js/Pages/AuthorizationPage/AuthorizationPageContainer.js");
@@ -4232,7 +4260,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Pages_TeacherAccountPage_ViewResults_ViewResultsContainer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Pages/TeacherAccountPage/ViewResults/ViewResultsContainer */ "./resources/js/Pages/TeacherAccountPage/ViewResults/ViewResultsContainer.js");
 /* harmony import */ var _Pages_StudentAccountPage_StudentAccount_StudentAccountContainer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Pages/StudentAccountPage/StudentAccount/StudentAccountContainer */ "./resources/js/Pages/StudentAccountPage/StudentAccount/StudentAccountContainer.js");
 /* harmony import */ var _Pages_StudentAccountPage_StudentPassTest_StudentPassTestContainer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Pages/StudentAccountPage/StudentPassTest/StudentPassTestContainer */ "./resources/js/Pages/StudentAccountPage/StudentPassTest/StudentPassTestContainer.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Pages_NotFound__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Pages/NotFound */ "./resources/js/Pages/NotFound.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -4246,31 +4276,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Router = function Router() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Routes, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Routes, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: _routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.STARTING_PAGE,
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_StartingPage_StartingPageContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_StartingPage_StartingPageContainer__WEBPACK_IMPORTED_MODULE_1__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: _routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.AUTHORIZATION_PAGE,
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_AuthorizationPage_AuthorizationPageContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_AuthorizationPage_AuthorizationPageContainer__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: _routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.TEACHER_ACCOUNT,
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_TeacherAccountPage_TeacherAccount_TeacherAccountContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_TeacherAccountPage_TeacherAccount_TeacherAccountContainer__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: _routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.STUDENT_ACCOUNT,
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_StudentAccountPage_StudentAccount_StudentAccountContainer__WEBPACK_IMPORTED_MODULE_7__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_StudentAccountPage_StudentAccount_StudentAccountContainer__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: _routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.CREATE_TEST,
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_TeacherAccountPage_CreateTest_CreateTestContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_TeacherAccountPage_CreateTest_CreateTestContainer__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: "".concat(_routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.VIEW_TEST, "/:id"),
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_TeacherAccountPage_ViewTest_ViewTestContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_TeacherAccountPage_ViewTest_ViewTestContainer__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: "".concat(_routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.VIEW_RESULTS, "/:id"),
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_TeacherAccountPage_ViewResults_ViewResultsContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_10__.Route, {
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_TeacherAccountPage_ViewResults_ViewResultsContainer__WEBPACK_IMPORTED_MODULE_6__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
       path: "".concat(_routeNames__WEBPACK_IMPORTED_MODULE_0__.ROUTE_NAMES.STUDENT_PASS_TEST, "/:code"),
-      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_Pages_StudentAccountPage_StudentPassTest_StudentPassTestContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_StudentAccountPage_StudentPassTest_StudentPassTestContainer__WEBPACK_IMPORTED_MODULE_8__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Route, {
+      path: "*",
+      element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_Pages_NotFound__WEBPACK_IMPORTED_MODULE_9__["default"], {})
     })]
   });
 };
@@ -4404,9 +4437,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n._97oOBCxZjcBaO3pmIkYYJw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n.wRIjznVjRYMdnYbeT5i43A\\=\\={\n    padding: 20px;\n    width:30%;\n    min-height:550px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    background-color: rgb(168, 216, 248);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 20px;\n}\n._8U9x3Bq8WXixErrfAT80IQ\\=\\={\n    padding:0;\n    margin:0;\n}\n._2w1xmcpix8po9yvGMnX2GA\\=\\={\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n\n.U5Mqga5wtqISIgD3ycHsqg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\={\n    width:40%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    font: inherit;\n    margin: 0 auto;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\=:hover{\n    background-color: rgb(232, 244, 255);\n    transition: 0.5s;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\=:active{\n    background-color: #fff;\n    transition: 0.2s;\n}\n.vuNwt-Kfe1q9Qcg9e-STgw\\=\\={\n    color: #ffc107;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n._97oOBCxZjcBaO3pmIkYYJw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n.wRIjznVjRYMdnYbeT5i43A\\=\\={\n    padding: 20px;\n    width:30%;\n    min-height:550px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    background-color: rgb(168, 216, 248);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 20px;\n}\n._8U9x3Bq8WXixErrfAT80IQ\\=\\={\n    padding:0;\n    margin:0;\n}\n._2w1xmcpix8po9yvGMnX2GA\\=\\={\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n\n.U5Mqga5wtqISIgD3ycHsqg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\={\n    width:40%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    font: inherit;\n    margin: 0 auto;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\=:hover{\n    background-color: rgb(232, 244, 255);\n    transition: 0.5s;\n}\n\n.Qi9qZwegIwlQKmqMFpioJw\\=\\=:active{\n    background-color: #fff;\n    transition: 0.2s;\n}\n.vuNwt-Kfe1q9Qcg9e-STgw\\=\\={\n    color: #ffc107;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "_97oOBCxZjcBaO3pmIkYYJw==",
@@ -4438,9 +4471,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.qFiTKXxHL-uILdoJ7ILh9Q\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n.BZ0Zg\\+m3YApN-OcFY2xHgA\\=\\={\n    width:80%;\n    display: flex;\n    min-height: 400px;\n    justify-content:space-around;\n    border-radius: 30px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n.mS2l\\+EfSh2Ih-bcN4h1Jtw\\=\\={\n    width: 50%;\n    background: rgb(95, 167, 235);\n    border-radius: 20px 0px 0px 20px;\n    display: flex;\n    align-items: center;\n    justify-content:center;\n}\n.Xo2Z3rS5VylvzEgZFc6GRQ\\=\\={\n    width:70%;\n    height:300px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.X0pcPy5zohVgOAAI-MbSFA\\=\\={\n    width:70%;\n    height:300px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.zhjLsFWR4OVuicJ1JB7CtA\\=\\={\n    width: 50%;\n    padding:20px;\n    background: rgb(255, 255, 255);\n    border-radius: 0px 20px 20px 0px;\n    display: flex;\n    align-items: center;\n    justify-content:center;\n}\n.Qpn8EMfgVsWnvJAeZJQk7g\\=\\={\n    height:250px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.WDI99-kSYlj6Vw2HoAM3YA\\=\\={\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.jY92-fLJH-ixKGPAPON5qg\\=\\={\n    font: inherit;\n    width: 40%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n\n.jY92-fLJH-ixKGPAPON5qg\\=\\=:hover{\n    background-color: rgb(227, 241, 255);\n    transition: 0.5s;\n}\n\n.jY92-fLJH-ixKGPAPON5qg\\=\\=:active{\n    background-color: #fff;\n    transition: 0.2s;\n}\n\n.lZehbbx\\+SingDLJRb1nfRA\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\={\n    width:40%;\n    height:35px;\n    background-color: rgb(95, 167, 235);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\=:hover{\n    background-color: rgb(143, 198, 250);\n    transition: 0.5s;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\=:active{\n    background-color: rgb(95, 167, 235);\n    transition: 0.2s;\n}\n\n.m1i79BvRhyI8dYvBHAaafQ\\=\\={\n    color: #ffc107;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    font-weight: 300;\n    background: rgb(249, 252, 254) fixed;\n}\n\nh1,h3{\n    font-weight: 300;\n}\n\n.qFiTKXxHL-uILdoJ7ILh9Q\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n.BZ0Zg\\+m3YApN-OcFY2xHgA\\=\\={\n    width:80%;\n    display: flex;\n    min-height: 400px;\n    justify-content:space-around;\n    border-radius: 30px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n.mS2l\\+EfSh2Ih-bcN4h1Jtw\\=\\={\n    width: 50%;\n    background: rgb(95, 167, 235);\n    border-radius: 20px 0px 0px 20px;\n    display: flex;\n    align-items: center;\n    justify-content:center;\n}\n.Xo2Z3rS5VylvzEgZFc6GRQ\\=\\={\n    width:70%;\n    height:300px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.X0pcPy5zohVgOAAI-MbSFA\\=\\={\n    width:70%;\n    height:300px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.zhjLsFWR4OVuicJ1JB7CtA\\=\\={\n    width: 50%;\n    padding:20px;\n    background: rgb(255, 255, 255);\n    border-radius: 0px 20px 20px 0px;\n    display: flex;\n    align-items: center;\n    justify-content:center;\n}\n.Qpn8EMfgVsWnvJAeZJQk7g\\=\\={\n    height:250px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.WDI99-kSYlj6Vw2HoAM3YA\\=\\={\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n}\n.jY92-fLJH-ixKGPAPON5qg\\=\\={\n    font: inherit;\n    width: 40%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n\n.jY92-fLJH-ixKGPAPON5qg\\=\\=:hover{\n    background-color: rgb(227, 241, 255);\n    transition: 0.5s;\n}\n\n.jY92-fLJH-ixKGPAPON5qg\\=\\=:active{\n    background-color: #fff;\n    transition: 0.2s;\n}\n\n.lZehbbx\\+SingDLJRb1nfRA\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(95, 167, 235) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\={\n    width:40%;\n    height:35px;\n    background-color: rgb(95, 167, 235);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\=:hover{\n    background-color: rgb(143, 198, 250);\n    transition: 0.5s;\n}\n\n._2smADZ4MC8zk7\\+LFC8vKqA\\=\\=:active{\n    background-color: rgb(95, 167, 235);\n    transition: 0.2s;\n}\n\n.m1i79BvRhyI8dYvBHAaafQ\\=\\={\n    color: #ffc107;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "qFiTKXxHL-uILdoJ7ILh9Q==",
@@ -4477,9 +4510,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.w3rnrd8Y0PX5IebdaZ50qQ\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.P3mCASTb1KpyDJt2NcRWlw\\=\\={\n    width: 70%;\n    min-height: 400px;\n}\n\n._2M5Gl90R1lnoGNYpJCQorA\\=\\={\n    width:10%;\n    height:40px;\n    background-color:  rgb(127, 213, 199);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\nh1,h3{\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 300;\n}\n\n.w3rnrd8Y0PX5IebdaZ50qQ\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.P3mCASTb1KpyDJt2NcRWlw\\=\\={\n    width: 70%;\n    min-height: 400px;\n}\n\n._2M5Gl90R1lnoGNYpJCQorA\\=\\={\n    width:10%;\n    height:40px;\n    background-color:  rgb(127, 213, 199);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._2M5Gl90R1lnoGNYpJCQorA\\=\\=:hover{\n    background-color: rgb(119, 206, 192);\n    transition: 0.3s;\n}\n\n._2M5Gl90R1lnoGNYpJCQorA\\=\\=:active{\n    background-color:  rgb(127, 213, 199);\n}\n\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "w3rnrd8Y0PX5IebdaZ50qQ==",
@@ -4507,9 +4540,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.\\+GKSPSkHfR84agBlzStdbw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.SJXqzYjrzIc1MCZ0wPv36A\\=\\={\n    margin:5px;\n    display: flex;\n    align-items:center;\n    justify-content: space-around;\n    background-color: rgb(187, 227, 221);\n    padding: 10px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.l3OUvvstbJUpqs52OeH-sA\\=\\={\n    min-width: 40%;\n}\n\n.DN8MfJokfDr0uRUuWaerxA\\=\\={\n    height:40px;\n    width:80px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._5aDkkSY3lz7urjox3NQTzg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n.bDpXQNEYkcAFCtNp-gEfUw\\=\\={\n    display:flex;\n    align-items:center;\n    justify-content:center;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.\\+GKSPSkHfR84agBlzStdbw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.SJXqzYjrzIc1MCZ0wPv36A\\=\\={\n    margin:5px;\n    display: flex;\n    align-items:center;\n    justify-content: space-around;\n    background-color: rgb(187, 227, 221);\n    padding: 10px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.l3OUvvstbJUpqs52OeH-sA\\=\\={\n    min-width: 40%;\n}\n\n.DN8MfJokfDr0uRUuWaerxA\\=\\={\n    height:40px;\n    width:80px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._5aDkkSY3lz7urjox3NQTzg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n.bDpXQNEYkcAFCtNp-gEfUw\\=\\={\n    display:flex;\n    align-items:center;\n    justify-content:center;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "+GKSPSkHfR84agBlzStdbw==",
@@ -4540,9 +4573,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.Gy-9lTPOYgBRJnkPNyhvYg\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.tG5r3xizE-6wIKmYr02vFw\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    background-color: rgb(127, 213, 199);\n    padding:20px;\n    margin:20px;\n    min-height:300px;\n    min-width:400px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.P\\+PnbzZ\\+y-VF7yIcFMea5Q\\=\\={\n    min-width: 50%;\n}\n\n.XoqOw8g05QlnxhHz4lRMvA\\=\\={\n    height:40px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.mP3nKfodqCAkc284H5gOSg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.Gy-9lTPOYgBRJnkPNyhvYg\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.tG5r3xizE-6wIKmYr02vFw\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    background-color: rgb(127, 213, 199);\n    padding:20px;\n    margin:20px;\n    min-height:300px;\n    min-width:400px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.P\\+PnbzZ\\+y-VF7yIcFMea5Q\\=\\={\n    min-width: 50%;\n}\n\n.XoqOw8g05QlnxhHz4lRMvA\\=\\={\n    height:40px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.mP3nKfodqCAkc284H5gOSg\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "Gy-9lTPOYgBRJnkPNyhvYg==",
@@ -4572,9 +4605,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.M9nNg9er3RU\\+mV-cRY8xeQ\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n    min-width:60%;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.D4cdJDdVX01I\\+aYUjKPfoA\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    min-height:500px;\n    min-width: 40%;\n}\n\n._7s-9EJI4mpwgbVs0p5jtXg\\=\\={\n    min-width: 40%;\n    min-height: 200px;\n}\n\n.XK\\+QtA6ZAavviBofTteCQQ\\=\\={\n    height:40px;\n    background-color: rgb(127, 213, 199);\n    border-radius: 20px;\n    margin: 10px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._79AZqU1XCRKN7Z9yfS7-7w\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(210, 176, 220) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.M9nNg9er3RU\\+mV-cRY8xeQ\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n    min-width:60%;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.D4cdJDdVX01I\\+aYUjKPfoA\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    min-height:500px;\n    min-width: 40%;\n}\n\n._7s-9EJI4mpwgbVs0p5jtXg\\=\\={\n    min-width: 40%;\n    min-height: 200px;\n}\n\n.XK\\+QtA6ZAavviBofTteCQQ\\=\\={\n    width:10%;\n    height:40px;\n    background-color: rgb(127, 213, 199);\n    border-radius: 20px;\n    margin: 10px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.XK\\+QtA6ZAavviBofTteCQQ\\=\\=:hover{\n    background-color: rgb(119, 206, 192);\n    transition: 0.3s;\n}\n\n.XK\\+QtA6ZAavviBofTteCQQ\\=\\=:active{\n    background-color:  rgb(127, 213, 199);\n}\n\n._79AZqU1XCRKN7Z9yfS7-7w\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(210, 176, 220) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "M9nNg9er3RU+mV-cRY8xeQ==",
@@ -4604,9 +4637,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: 'Krub', sans-serif;\n}\n\n.YMxQpQYT4rUAuJEUWaZouA\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(127, 213, 199);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.FolFqVDfxAfNpH\\+itvL8kw\\=\\={\n    font-weight:300;\n    font-size:24px;\n}\n\n.bd2srviI2oW7pMYc3nwKCw\\=\\={\n    font-weight:100;\n    font-size: 14px;\n}\n\n.rT0JAuiUFLrDzLRkm0uIrQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 40%;\n}\n\n\n.mHeT8\\+cNYCDMLOLZp3yxDg\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n}\n.YMxQpQYT4rUAuJEUWaZouA\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(127, 213, 199);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.FolFqVDfxAfNpH\\+itvL8kw\\=\\={\n    font-weight:300;\n    font-size:24px;\n}\n\n.bd2srviI2oW7pMYc3nwKCw\\=\\={\n    font-weight:300;\n    font-size: 15px;\n}\n\n.rT0JAuiUFLrDzLRkm0uIrQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    min-width: 60%;\n}\n\n\n.mHeT8\\+cNYCDMLOLZp3yxDg\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "YMxQpQYT4rUAuJEUWaZouA==",
@@ -4636,9 +4669,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    font-family: 'Krub', sans-serif;\r\n    font-size: 18px;\r\n    background: rgb(249, 252, 254) fixed;\r\n}\r\n\r\n.Rz6ubDhJdZIdoX31lO9Buw\\=\\= {\r\n    display: flex;\r\n    flex-direction:column;\r\n    align-items:center;\r\n    padding:20px;\r\n    margin:10px;\r\n    background-color: rgb(240,249,255);\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n    border-radius: 10px;\r\n}\r\n\r\np{\r\n    padding:0;\r\n    margin:0;\r\n}\r\n\r\n.cZOcNh5VvP8AsFbQT7sW2g\\=\\={\r\n    margin:5px;\r\n    display: flex;\r\n    align-items:center;\r\n    justify-content: space-around;\r\n    background-color:rgb(239, 223, 244);\r\n    padding: 10px;\r\n    border-radius: 20px;\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n}\r\n\r\n.I7OKdz6bH08PrBzcSFGykA\\=\\={\r\n    min-width: 40%;\r\n}\r\n\r\n._9xvYSvsg7s7z41P-4odUlA\\=\\={\r\n    height:40px;\r\n    width:80px;\r\n    background-color: rgb(236, 208, 246);\r\n    border-radius: 20px;\r\n    border: none;\r\n    font: inherit;\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n}\r\n\r\n._2eOZHS-h6-LJOFvK2ZTJeQ\\=\\={\r\n    height:30px;\r\n    background-color: #fff;\r\n    border-radius: 20px;\r\n    border: rgb(223, 203, 230) solid 2px;\r\n    padding: 5px;\r\n    font: inherit;\r\n    outline: none;\r\n}\r\n\r\n.px5De\\+MfesLJTsbx6XRK8g\\=\\={\r\n    display:flex;\r\n    align-items:center;\r\n    justify-content:center;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.Rz6ubDhJdZIdoX31lO9Buw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.cZOcNh5VvP8AsFbQT7sW2g\\=\\={\n    margin:5px;\n    display: flex;\n    align-items:center;\n    justify-content: space-around;\n    background-color:rgb(239, 223, 244);\n    padding: 10px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.I7OKdz6bH08PrBzcSFGykA\\=\\={\n    min-width: 40%;\n}\n\n._9xvYSvsg7s7z41P-4odUlA\\=\\={\n    height:40px;\n    width:80px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._9xvYSvsg7s7z41P-4odUlA\\=\\=:hover{\n    background-color: rgb(227, 197, 238);\n    transition: 0.3s;\n}\n\n._9xvYSvsg7s7z41P-4odUlA\\=\\=:active{\n    background-color: rgb(236, 208, 246);\n}\n\n\n._2eOZHS-h6-LJOFvK2ZTJeQ\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n.px5De\\+MfesLJTsbx6XRK8g\\=\\={\n    display:flex;\n    align-items:center;\n    justify-content:center;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "Rz6ubDhJdZIdoX31lO9Buw==",
@@ -4669,9 +4702,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.JyObbj9Y8tPzJvXowYHRaw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.RjozxQMJIN\\+OMc18VsrFhA\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    background-color:rgb(210, 176, 220);\n    padding:20px;\n    margin:20px;\n    min-height:300px;\n    min-width:300px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.Ov\\+b4RuqGVh8kBSSBsUwWA\\=\\={\n    min-width: 50%;\n}\n\n._3YgBUzNP\\+4ffzB8ggg-hdg\\=\\={\n    height:40px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.amyQr4XrM61\\+i7\\+k\\+goUEQ\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.JyObbj9Y8tPzJvXowYHRaw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.RjozxQMJIN\\+OMc18VsrFhA\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    background-color:rgb(210, 176, 220);\n    padding:20px;\n    margin:20px;\n    min-height:300px;\n    min-width:300px;\n    border-radius: 20px;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.Ov\\+b4RuqGVh8kBSSBsUwWA\\=\\={\n    min-width: 50%;\n}\n\n._3YgBUzNP\\+4ffzB8ggg-hdg\\=\\={\n    height:40px;\n    background-color: rgb(236, 208, 246);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._3YgBUzNP\\+4ffzB8ggg-hdg\\=\\=:hover{\n    background-color: rgb(227, 197, 238);\n    transition: 0.3s;\n}\n\n._3YgBUzNP\\+4ffzB8ggg-hdg\\=\\=:active{\n    background-color: rgb(236, 208, 246);\n}\n\n.amyQr4XrM61\\+i7\\+k\\+goUEQ\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(223, 203, 230) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "JyObbj9Y8tPzJvXowYHRaw==",
@@ -4701,9 +4734,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    font-family: 'Krub', sans-serif;\r\n    font-size: 18px;\r\n    background: rgb(249, 252, 254) fixed;\r\n}\r\n\r\n.qgtzstFt3sqeg8tukixGTA\\=\\= {\r\n    display: flex;\r\n    flex-direction:column;\r\n    align-items:center;\r\n    padding:20px;\r\n    margin:10px;\r\n    background-color: rgb(240,249,255);\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n    border-radius: 10px;\r\n}\r\n\r\np{\r\n    padding:0;\r\n    margin:0;\r\n}\r\n\r\n.Qc2UTqXhlj1vVnmxqkUUqQ\\=\\={\r\n    display: flex;\r\n    flex-direction:column;\r\n    align-items:space-around;\r\n    justify-content: space-around;\r\n    min-height:500px;\r\n    min-width: 40%;\r\n}\r\n\r\n.LX4x4G6x6z30AHdwMfxuQA\\=\\={\r\n    min-width: 40%;\r\n    min-height: 200px;\r\n}\r\n\r\n.khAT1zp6hlSwFq7zI--1-w\\=\\={\r\n    height:40px;\r\n    background-color: rgb(210, 176, 220);\r\n    border-radius: 20px;\r\n    margin: 10px;\r\n    border: none;\r\n    font: inherit;\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n}\r\n\r\n.JJ1pJE5EKZbk9QE7PwmFxA\\=\\={\r\n    height:30px;\r\n    background-color: #fff;\r\n    border-radius: 20px;\r\n    border: rgb(210, 176, 220) solid 2px;\r\n    padding: 5px;\r\n    font: inherit;\r\n    outline: none;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.qgtzstFt3sqeg8tukixGTA\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.Qc2UTqXhlj1vVnmxqkUUqQ\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    min-height:500px;\n    min-width: 40%;\n}\n\n.LX4x4G6x6z30AHdwMfxuQA\\=\\={\n    min-width: 40%;\n    min-height: 200px;\n}\n\n.khAT1zp6hlSwFq7zI--1-w\\=\\={\n    height:40px;\n    background-color: rgb(210, 176, 220);\n    border-radius: 20px;\n    margin: 10px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.khAT1zp6hlSwFq7zI--1-w\\=\\=:hover{\n    background-color: rgb(207, 164, 220);\n    transition: 0.3s;\n}\n\n.khAT1zp6hlSwFq7zI--1-w\\=\\=:active{\n    background-color: rgb(210, 176, 220);\n}\n\n\n.JJ1pJE5EKZbk9QE7PwmFxA\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(210, 176, 220) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "qgtzstFt3sqeg8tukixGTA==",
@@ -4733,9 +4766,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    font-family: 'Krub', sans-serif;\r\n    font-size: 18px;\r\n    background: rgb(249, 252, 254) fixed;\r\n}\r\n\r\n.kca\\+gqIAfJEzCjkeZk8clA\\=\\= {\r\n    display: flex;\r\n    flex-direction:column;\r\n    align-items:center;\r\n    justify-content: space-around;\r\n    padding:20px;\r\n    margin:10px;\r\n    min-height: 600px;\r\n    background-color: rgb(240,249,255);\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n    border-radius: 10px;\r\n}\r\n\r\n.UKtnfp-YWgv8Qm-3tWgh8A\\=\\={\r\n    width: 70%;\r\n    min-height: 400px;\r\n}\r\n\r\n._9dbExSMwi15cdproG6V31g\\=\\={\r\n    width:10%;\r\n    height:40px;\r\n    background-color: rgb(210, 176, 220);\r\n    border-radius: 20px;\r\n    border: none;\r\n    font: inherit;\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.kca\\+gqIAfJEzCjkeZk8clA\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.UKtnfp-YWgv8Qm-3tWgh8A\\=\\={\n    width: 70%;\n    min-height: 400px;\n}\n\n._9dbExSMwi15cdproG6V31g\\=\\={\n    width:10%;\n    height:40px;\n    background-color: rgb(210, 176, 220);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n._9dbExSMwi15cdproG6V31g\\=\\=:hover{\n    background-color: rgb(207, 164, 220);\n    transition: 0.3s;\n}\n\n._9dbExSMwi15cdproG6V31g\\=\\=:active{\n    background-color: rgb(210, 176, 220);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "kca+gqIAfJEzCjkeZk8clA==",
@@ -4763,9 +4796,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "._6Xz9oDNpTq91uHWCb1zNng\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(210, 176, 220);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.Or2cTcHbB5yLUs0YAU737w\\=\\={\n    font-weight:300;\n    font-size:24px;\n}\n\n.TPgAjcRgUnVhjyD5CCtFJg\\=\\={\n    font-weight:100;\n    font-size: 14px;\n}\n\n.XjCFqj4rj7yJuRiyAYztfQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 60%;\n}\n\n.lbV8\\+PqAJF\\+qrdnhCHqMvw\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 40%;\n}\n\n.Usm2\\+hWPcV6XlGdyc8wzmg\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font-family: 'Montserrat', sans-serif;\n}\n\n._6Xz9oDNpTq91uHWCb1zNng\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(210, 176, 220);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.Or2cTcHbB5yLUs0YAU737w\\=\\={\n    font-weight:300;\n    font-size:24px;\n}\n\n.TPgAjcRgUnVhjyD5CCtFJg\\=\\={\n    font-weight:300;\n    font-size: 14px;\n}\n\n.XjCFqj4rj7yJuRiyAYztfQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 60%;\n}\n\n.lbV8\\+PqAJF\\+qrdnhCHqMvw\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 40%;\n}\n\n.Usm2\\+hWPcV6XlGdyc8wzmg\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n\n.Usm2\\+hWPcV6XlGdyc8wzmg\\=\\=:hover{\n    background-color: #fcf8ff;\n    transition: 0.3s;\n}\n\n.Usm2\\+hWPcV6XlGdyc8wzmg\\=\\=:active{\n    background-color: #fff;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "_6Xz9oDNpTq91uHWCb1zNng==",
@@ -4796,9 +4829,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n}\n.rmf2y7BjAt5J8EnIIUPkxQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(210, 176, 220);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.jb9iGSLhOnw0h0QAjZo3iw\\=\\={\n    font-weight:300;\n    font-size:18px;\n}\n\n.kGz3-nsDTwnOonWoj6nhaQ\\=\\={\n    font-weight:100;\n    font-size: 18px;\n}\n\n.\\+gtwRlV1LOSc8IUmK53Hbw\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items:center;\n    width: 30%;\n}\n\n.ZWhgv39Womp3Qt4dWR45QQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 40%;\n}\n\n._0U71iw05gy8hfCaVPojCbA\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n}\n.rmf2y7BjAt5J8EnIIUPkxQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    padding:20px;\n    margin:20px;\n    height: 30px;\n    background-color: rgb(210, 176, 220);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.jb9iGSLhOnw0h0QAjZo3iw\\=\\={\n    font-weight:300;\n    font-size:18px;\n}\n\n.kGz3-nsDTwnOonWoj6nhaQ\\=\\={\n    font-weight:300;\n    font-size: 18px;\n}\n\n.\\+gtwRlV1LOSc8IUmK53Hbw\\=\\= {\n    display: flex;\n    justify-content: space-between;\n    align-items:center;\n    width: 30%;\n}\n\n.ZWhgv39Womp3Qt4dWR45QQ\\=\\= {\n    display: flex;\n    justify-content: space-around;\n    align-items:center;\n    width: 40%;\n}\n\n._0U71iw05gy8hfCaVPojCbA\\=\\={\n    font: inherit;\n    width: 25%;\n    height:35px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: none;\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "rmf2y7BjAt5J8EnIIUPkxQ==",
@@ -4829,9 +4862,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    font-family: 'Krub', sans-serif;\r\n    font-size: 18px;\r\n    background: rgb(249, 252, 254) fixed;\r\n}\r\n\r\n.srSsezRTR3eecMxAIvy6Jg\\=\\= {\r\n    display: flex;\r\n    flex-direction:column;\r\n    align-items:center;\r\n    justify-content: space-around;\r\n    padding:20px;\r\n    margin:10px;\r\n    min-height: 600px;\r\n    background-color: rgb(240,249,255);\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n    border-radius: 10px;\r\n}\r\n\r\n.ZvRaNJ-cDKrVweZwidVOxw\\=\\={\r\n    width: 70%;\r\n    min-height: 400px;\r\n}\r\n\r\n.AgLypwboQ4XxkFqI0sOCNA\\=\\={\r\n    width:10%;\r\n    height:40px;\r\n    background-color: rgb(210, 176, 220);\r\n    border-radius: 20px;\r\n    border: none;\r\n    font: inherit;\r\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.srSsezRTR3eecMxAIvy6Jg\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    justify-content: space-around;\n    padding:20px;\n    margin:10px;\n    min-height: 600px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n}\n\n.ZvRaNJ-cDKrVweZwidVOxw\\=\\={\n    width: 70%;\n    min-height: 400px;\n}\n\n.AgLypwboQ4XxkFqI0sOCNA\\=\\={\n    width:10%;\n    height:40px;\n    background-color: rgb(210, 176, 220);\n    border-radius: 20px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.AgLypwboQ4XxkFqI0sOCNA\\=\\=:hover{\n    background-color: rgb(207, 164, 220);\n    transition: 0.3s;\n}\n\n.AgLypwboQ4XxkFqI0sOCNA\\=\\=:active{\n    background-color: rgb(210, 176, 220);\n}\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "srSsezRTR3eecMxAIvy6Jg==",
@@ -4859,9 +4892,9 @@ __webpack_require__.r(__webpack_exports__);
 // Imports
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Krub', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.naI4R5xgZlRD0rvR05mscw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n    min-width:60%;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.erVS0cpTyGOGuC1kvcqNPQ\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    min-height:500px;\n    min-width: 40%;\n}\n\n.Gqn80fAqvDGWd806bMOzmA\\=\\={\n    min-width: 40%;\n    min-height: 200px;\n}\n\n.sHqUvszjRI-9Ou63FDVfFw\\=\\={\n    height:40px;\n    background-color: rgb(210, 176, 220);\n    border-radius: 20px;\n    margin: 10px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.CIXBosfKgQrkmbaHa3FTaw\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(210, 176, 220) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\n    font-family: 'Montserrat', sans-serif;\n    font-size: 18px;\n    background: rgb(249, 252, 254) fixed;\n}\n\n.naI4R5xgZlRD0rvR05mscw\\=\\= {\n    display: flex;\n    flex-direction:column;\n    align-items:center;\n    padding:20px;\n    margin:10px;\n    background-color: rgb(240,249,255);\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n    border-radius: 10px;\n    min-width:60%;\n}\n\np{\n    padding:0;\n    margin:0;\n}\n\n.erVS0cpTyGOGuC1kvcqNPQ\\=\\={\n    display: flex;\n    flex-direction:column;\n    align-items:space-around;\n    justify-content: space-around;\n    min-height:500px;\n    min-width: 40%;\n}\n\n.Gqn80fAqvDGWd806bMOzmA\\=\\={\n    min-width: 40%;\n    min-height: 200px;\n}\n\n.sHqUvszjRI-9Ou63FDVfFw\\=\\={\n    width:10%;\n    height:40px;\n    background-color: rgb(210, 176, 220);\n    border-radius: 20px;\n    margin: 10px;\n    border: none;\n    font: inherit;\n    box-shadow: 4px 4px 11px 0px rgba(34, 60, 80, 0.2);\n}\n\n.CIXBosfKgQrkmbaHa3FTaw\\=\\={\n    height:30px;\n    background-color: #fff;\n    border-radius: 20px;\n    border: rgb(210, 176, 220) solid 2px;\n    padding: 5px;\n    font: inherit;\n    outline: none;\n}\n\n\n.sHqUvszjRI-9Ou63FDVfFw\\=\\=:hover{\n    background-color: rgb(207, 164, 220);\n    transition: 0.3s;\n}\n\n.sHqUvszjRI-9Ou63FDVfFw\\=\\=:active{\n    background-color: rgb(210, 176, 220);\n}\n\n", ""]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"container": "naI4R5xgZlRD0rvR05mscw==",

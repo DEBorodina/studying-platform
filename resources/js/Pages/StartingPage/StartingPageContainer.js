@@ -16,7 +16,6 @@ const StartingPageContainer = () => {
       .then((response) => {
           if(response.data.token){
               localStorage.setItem('token',response.data.token);
-              console.log(response.data.user);
               if(response.data.user.role==="2"){
                   navigate("/teacher");
               }else if(response.data.user.role==="3"){

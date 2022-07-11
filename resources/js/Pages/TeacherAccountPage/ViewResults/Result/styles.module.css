@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
 body{
-    font-family: 'Krub', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .container {
     display: flex;
@@ -22,7 +23,7 @@ body{
 }
 
 .code{
-    font-weight:100;
+    font-weight:300;
     font-size: 18px;
 }
 
