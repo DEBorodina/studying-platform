@@ -21,7 +21,7 @@ const StudentAccountContainer = () => {
                 }
             })
             .catch((error) => {
-                console.log(error.response.data.message);
+                console.log(error.response.data);
                 if(error.response.data.message==='teacher'){
                     navigate("/teacher");
                 }else{

@@ -2624,7 +2624,7 @@ var StudentAccountContainer = function StudentAccountContainer() {
         });
       }
     })["catch"](function (error) {
-      console.log(error.response.data.message);
+      console.log(error.response.data);
 
       if (error.response.data.message === 'teacher') {
         navigate("/teacher");
@@ -2839,7 +2839,7 @@ var StudentPassTestContainer = function StudentPassTestContainer() {
         };
       });
     })["catch"](function (error) {
-      console.log(error.response.data.message);
+      console.log(error.response.data);
 
       if (error.response.data.message === 'not found' || error.response.data.message === 'already been passed') {
         navigate("/student");
@@ -2861,8 +2861,10 @@ var StudentPassTestContainer = function StudentPassTestContainer() {
         'Authorization': "Bearer " + localStorage.getItem('token')
       }
     }).then(function (response) {
+      console.log(response);
       navigate("/student");
     })["catch"](function (response) {
+      console.log(response);
       navigate("/student");
     });
   };

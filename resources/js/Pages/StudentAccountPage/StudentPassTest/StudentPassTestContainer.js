@@ -31,7 +31,7 @@ const StudentPassTestContainer = () => {
             .then((response) => {
                     setTest((state)=>({questions:response.data.questions, name:response.data.name}));
             }).catch((error) => {
-                console.log(error.response.data.message);
+                console.log(error.response.data);
                 if(error.response.data.message==='not found' || error.response.data.message==='already been passed'){
                     navigate("/student");
                 }
@@ -49,8 +49,10 @@ const StudentPassTestContainer = () => {
                 {headers: {'Authorization': "Bearer " + localStorage.getItem('token')}
             })
             .then((response) => {
+                console.log(response);
                 navigate("/student");
             }).catch((response) => {
+                console.log(response);
            navigate("/student");
         })
     }
