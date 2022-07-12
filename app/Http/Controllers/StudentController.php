@@ -75,15 +75,8 @@ class StudentController extends Controller
         $maxPoints = count($questions);
 
         foreach ($questions as $question){
-           $right = true;
-           foreach ($question->answers as $answer){
-               if(($answer->is_right && !in_array($answer->id,$answers))||
-                   (!$answer->is_right && in_array($answer->id,$answers))){
-                   $right = false;
-                   break;
-               }
-           }
-           if($right){
+           $check = array_diff($question->answers, $answers);
+           if(!$check){
                $points++;
            }
         }
