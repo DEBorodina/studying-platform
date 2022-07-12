@@ -74,16 +74,23 @@ class StudentController extends Controller
         $points = 0;
         $maxPoints = count($questions);
 
-        /*foreach ($questions as $question){
-          $check = array_diff($question['answers']->toArray(),$answers);
-          if(!$check){
-              $points++;
+        foreach ($questions as $question){
+           $right = true;
+           foreach ($question->answers as $answer){
+               if(($answer->is_right && !in_array($answer->id,$answers))||
+                   (!$answer->is_right && in_array($answer->id,$answers))){
+                   $right = false;
+                   break;
+               }
            }
-        }*/
+           if($right){
+               $points++;
+           }
+        }
 
         $score = ($points/$maxPoints)*100;
         $user= auth()->user();
-       // $user->tests()->attach($test->id,['score'=>$score]);*/
+        $user->tests()->attach($test->id,['score'=>$score]);
         return response(array_diff($questions[0]['answers']->toArray(),$answers),200);
     }
 }
